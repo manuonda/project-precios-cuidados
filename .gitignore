@@ -2,3 +2,5 @@
 scraping/data_files/
 
 .vscode/
+
+scraping/__pycache__/
