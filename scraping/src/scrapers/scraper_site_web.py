@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from create_tablas import Comercio, Producto, Base , PreciosCuidadosHistorial
 from unzip_file import descomprimir_archivo
-from read_file_csv import leer_csv
+from read_file_csv import leer_directorio
 
 print("Iniciando scrapping")
 
@@ -79,8 +79,10 @@ if response.status_code == 200:
                                 # Descomprimir el archivo zip si es necesario
                                 if nombre_archivo_extension.endswith('.zip'):
                                     directorio_archivo = descomprimir_archivo(nombre_archivo, ejecutar_descompresion=True)  # Asegúrate de pasar False para ejecutar_descompresion
-                                    print(f'Directorio descomprimido: {directorio_archivo}')
-                                    leer_csv(directorio_archivo)
+                                    print(f'End Directorio descomprimido: {directorio_archivo}')
+                                    print('----------------------------------------------------')
+                                    print(' READING DIRECTORY --')
+                                    leer_directorio(directorio_archivo)
                                     
                                 # Obtener la fecha y hora actual
                                 fecha_alta = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')

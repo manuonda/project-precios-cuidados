@@ -57,8 +57,9 @@ def leer_directorio(path_directorio):
     print(f"Leyendo archivos en el directorio: {path_directorio}")
     
     for directory in os.listdir(path_directorio):
-        print("directory: ", directory)
-        if os.path.isdir(directory):
+        print("name directory: ", directory)
+        path_directory = os.path.join(path_directorio, directory)
+        if os.path.isdir(path_directory):
             print(f"Es un directorio: {directory}")
             for filecsv in os.listdir(directory) : 
                 if filecsv.endswith('.csv'):

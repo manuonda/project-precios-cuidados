@@ -4,7 +4,7 @@ import os
 
 
 def descomprimir_archivo(pathArchivo, ejecutar_descompresion=False):
-    print(f'Descomprimiendo archivo: {pathArchivo}')
+    print(f'Descomprimiendo archivo zip father: {pathArchivo}')
     """
     Descomprime el archivo zip y extrae los archivos en un directorio con el nombre del archivo zip
     """
@@ -14,7 +14,7 @@ def descomprimir_archivo(pathArchivo, ejecutar_descompresion=False):
     nombre_directorio = os.path.splitext(nombre_archivo)[0]
     directorio_archivo = os.path.join(directorio, nombre_directorio)
 
-    print(f'Directorio descomprimido: {directorio_archivo}')
+    #print(f'Directorio descomprimido: {directorio_archivo}')
     if not os.path.exists(directorio_archivo):
         os.makedirs(directorio_archivo)
 
@@ -23,7 +23,7 @@ def descomprimir_archivo(pathArchivo, ejecutar_descompresion=False):
         # Extraer los archivos del zip en el directorio creado
         zip_ref.extractall(directorio_archivo)
 
-    print(f'Archivo descomprimido en: {directorio_archivo}')
+    #print(f'Archivo descomprimido en: {directorio_archivo}')
 
     if ejecutar_descompresion:
         # Recorrer el directorio de los archivos descomprimidos
