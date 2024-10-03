@@ -4,7 +4,7 @@ import os
 
 
 def descomprimir_archivo(pathArchivo, ejecutar_descompresion=False):
-    print(f'Descomprimiendo archivo zip father: {pathArchivo}')
+    print(f'Descomprimiendo archivo zip : {pathArchivo}')
     """
     Descomprime el archivo zip y extrae los archivos en un directorio con el nombre del archivo zip
     """

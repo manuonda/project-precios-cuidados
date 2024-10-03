@@ -76,9 +76,11 @@ if response.status_code == 200:
                                     f.write(archivo_response.content)
 
                                 print(f'Archivo {nombre_archivo} descargado con éxito.')
+                                print('-------------------------------')
 
                                 # Descomprimir el archivo zip si es necesario
                                 if nombre_archivo_extension.endswith('.zip'):
+                                    print(f'Archivo tiene extension : {nombre_archivo} se contina a descomprimir archivo')
                                     directorio_descomprimido = descomprimir_archivo(nombre_archivo, ejecutar_descompresion=True)  # Asegúrate de pasar False para ejecutar_descompresion
                                     print(f'Directorio descomprimido: {directorio_descomprimido}')
                                     leer_directorio(directorio_descomprimido)

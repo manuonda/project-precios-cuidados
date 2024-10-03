@@ -54,6 +54,7 @@ def read_file_comercio_csv(path_archivo):
 
 def leer_directorio(path_directorio):
     """Función para leer archivos CSV en un directorio y procesarlos según su tipo"""
+    print('---------------------------------------------')
     print(f"Leyendo archivos en el directorio: {path_directorio}")
     
     for directory in os.listdir(path_directorio):
