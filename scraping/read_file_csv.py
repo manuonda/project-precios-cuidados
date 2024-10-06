@@ -15,7 +15,7 @@ def read_file_comercio_csv(path_archivo):
     with open(path_archivo, newline='') as file_csv:
         reader = csv.reader(file_csv, delimiter='|')  # Specify the delimiter as '|'
         encabezados = next(reader)
-        print("Encabezados:", encabezados)
+        print(f"Encabezados: {encabezados}")
         input("Press Enter to continue...")
 
         for num_fila, fila in enumerate(reader, start=1):
@@ -43,20 +43,20 @@ def read_file_comercio_csv(path_archivo):
                 print(f"comercio_ultima_actualizacion: {comercio_ultima_actualizacion}")
                 print(f"comercio_version_sepa: {comercio_version_sepa}")
                 # fecha_alta = formatted_date
-                # comercio = Comercio()
-                # comercio.id_comercio =id_comercio 
-                # comercio.id_bandera = id_bandera 
-                # comercio.comercio_cuit = comercio_cuit
-                # comercio.comercio_razon_social = comercio_razon_social
-                # comercio.comercio_bandera_nombre = comercio_bandera_nombre
-                # comercio.comercio_bandera_url = comercio_bandera_url
-                # comercio.comercio_ultima_actualizacion = comercio_ultima_actualizacion
-                # comercio.comercio_version_sepa = comercio_version_sepa
-                # comercio.fecha_alta = fecha_alta
-                # print(comercio)
+                comercio = Comercio()
+                comercio.id_comercio =id_comercio 
+                comercio.id_bandera = id_bandera 
+                comercio.comercio_cuit = comercio_cuit
+                comercio.comercio_razon_social = comercio_razon_social
+                comercio.comercio_bandera_nombre = comercio_bandera_nombre
+                comercio.comercio_bandera_url = comercio_bandera_url
+                comercio.comercio_ultima_actualizacion = comercio_ultima_actualizacion
+                comercio.comercio_version_sepa = comercio_version_sepa
+                #comercio.fecha_alta = fecha_alta
+                print(comercio)
 
-                # Insertar en la base de datos 
-                #comercio.insert_comercio(session)
+                ##Insertar en la base de datos 
+                comercio.insert_comercio(session)
 
             print()  # Salto de línea después de cada fila
 
